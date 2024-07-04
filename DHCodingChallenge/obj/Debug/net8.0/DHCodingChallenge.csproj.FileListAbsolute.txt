@@ -1,0 +1,14 @@
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\bin\Debug\net8.0\DHCodingChallenge.exe
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\bin\Debug\net8.0\DHCodingChallenge.deps.json
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\bin\Debug\net8.0\DHCodingChallenge.runtimeconfig.json
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\bin\Debug\net8.0\DHCodingChallenge.dll
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\bin\Debug\net8.0\DHCodingChallenge.pdb
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\obj\Debug\net8.0\DHCodingChallenge.GeneratedMSBuildEditorConfig.editorconfig
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\obj\Debug\net8.0\DHCodingChallenge.AssemblyInfoInputs.cache
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\obj\Debug\net8.0\DHCodingChallenge.AssemblyInfo.cs
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\obj\Debug\net8.0\DHCodingChallenge.csproj.CoreCompileInputs.cache
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\obj\Debug\net8.0\DHCodingChallenge.dll
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\obj\Debug\net8.0\refint\DHCodingChallenge.dll
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\obj\Debug\net8.0\DHCodingChallenge.pdb
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\obj\Debug\net8.0\DHCodingChallenge.genruntimeconfig.cache
+d:\Documents\Repos\DHCodingChallenge\DHCodingChallenge\obj\Debug\net8.0\ref\DHCodingChallenge.dll
