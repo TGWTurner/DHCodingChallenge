@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\DHCodingChallenge.csproj": {}
+    "D:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\DHCodingChallenge.csproj": {}
   },
   "projects": {
-    "d:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\DHCodingChallenge.csproj": {
+    "D:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\DHCodingChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\DHCodingChallenge.csproj",
+        "projectUniqueName": "D:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\DHCodingChallenge.csproj",
         "projectName": "DHCodingChallenge",
-        "projectPath": "d:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\DHCodingChallenge.csproj",
+        "projectPath": "D:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\DHCodingChallenge.csproj",
         "packagesPath": "C:\\Users\\TGWTu\\.nuget\\packages\\",
-        "outputPath": "d:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\obj\\",
+        "outputPath": "D:\\Documents\\Repos\\DHCodingChallenge\\DHCodingChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TGWTu\\AppData\\Roaming\\NuGet\\NuGet.Config",
