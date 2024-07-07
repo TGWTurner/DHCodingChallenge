@@ -2,18 +2,18 @@ using DHCodingChallenge.Objects;
 
 namespace DHCodingChallenge;
 
-class Bookstore
+class Bookstore(Discounts discounts, List<int> bookOptions)
 {
-    public static void Run()
-    {
-        Basket basket = new();
+    private readonly Discounts Discounts = discounts;
+    private readonly List<int> BookOptions = bookOptions;
 
-        //TODO: convert to configuration file
-        List<int> bookOptions = [1, 2, 3, 4, 5];
+    public void Run()
+    {
+        Basket basket = new(Discounts);
 
         Console.WriteLine("Bookstore started:");
 
-        foreach(int bookOption in bookOptions)
+        foreach(int bookOption in BookOptions)
         {
             bool accepted;
             do {

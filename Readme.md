@@ -22,23 +22,19 @@ possible.
 
 ### My implementation
 
-1. Configure application from config file
-2. Loop through book options to create basket
-3. Finalize basket
-4. Compute optimal "buckets" for each book in the basket, minimising total cost
+1. Loop through book options to create basket
+2. Compute optimal "buckets" for each book in the basket, minimising total cost
+3. Loop through buckets to calculate total cost and display
 
 ### Decisions
 
 * Decimal type for storing currency values
 * Optimal basket calculation after the basket has been fully filled
 * * Leaves solution more open for the potential of removing books
-* Configuration file for storing discounts in
-* Discounts object to allow for possability of more books than provided discounts
+* Discounts object to allow for possibility of more books than provided discounts
 
-### Improvements
+### Possible Changes/Improvements
 
 * Configuration File
-  * Store the discounts and number of books
-* More books
-  * Just add them to the config file along with the discount for that many books
-* Convert BookBuckets.discounts to its own class
+  * Store the discounts and number of books for easy updating later
+*

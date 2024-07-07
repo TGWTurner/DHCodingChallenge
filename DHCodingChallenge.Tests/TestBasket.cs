@@ -20,7 +20,8 @@ public class TestBasket
     [DataRow(4*8*0.80+4*8*0.80, new int[] {1,1,2,2,3,3,4,5})]
     public void TestBasketTotalMatchesExpected(double expected, int[] bookIdentifiers)
     {
-        Basket basket = new();
+        Discounts discounts = new([1, 0.95, 0.9, 0.80, 0.75]);
+        Basket basket = new(discounts);
 
         PopulateBasket(basket, bookIdentifiers);
 

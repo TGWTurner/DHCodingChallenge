@@ -2,9 +2,11 @@ using DHCodingChallenge.Objects;
 
 namespace DHCodingChallenge;
 
-public class Basket
+public class Basket(Discounts discounts)
 {
     private readonly List<Book> Books = [];
+    private readonly Discounts Discounts = discounts;
+
     public decimal Total {
         get {
             List<BookBucket> bookBuckets = GetBestBuckets();
@@ -25,7 +27,7 @@ public class Basket
         {
             if (bookBuckets.Count == 0)
             {
-                BookBucket newBucket = new(book);
+                BookBucket newBucket = new(Discounts, book);
                 bookBuckets.Add(newBucket);
                 continue;
             }
@@ -37,7 +39,7 @@ public class Basket
             }
             else
             {
-                BookBucket newBucket = new(book);
+                BookBucket newBucket = new(Discounts, book);
                 bookBuckets.Add(newBucket);
             }
         }
