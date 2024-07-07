@@ -1,4 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
 using DHCodingChallenge.Objects;
 
 namespace DHCodingChallenge;
@@ -9,17 +8,7 @@ public class Basket
     public decimal Total {
         get {
             List<BookBucket> bookBuckets = GetBestBuckets();
-
-            decimal total = 0;
-
-            foreach(BookBucket bb in bookBuckets)
-            {
-                total += bb.Total;
-                Console.WriteLine(bb);
-            }
-
-            Console.WriteLine($"total: {total}");
-            return Books.Sum(x => x.Price);
+            return bookBuckets.Sum(bb => bb.Total);
         }
     }
 
@@ -30,23 +19,9 @@ public class Basket
 
     private List<BookBucket> GetBestBuckets()
     {
-        /*
-            Sorting Process
-            1. Loop through books
-            2. If no buckets
-              i. Create a new bucket
-              ii. Put current book in bucket
-              iii. Continue;
-            3. If are buckets
-              i. Filter buckets to only ones without this book
-              ii. Test each remaining bucket
-              iii. Track cost of given bucket and store the one which has minimum cost
-            4. Return
-        */
+        List<BookBucket> bookBuckets = [];
 
-        List<BookBucket> bookBuckets = [new(Books.First())];
-
-        foreach(Book book in Books.Except([Books.First()]))
+        foreach(Book book in Books)
         {
             if (bookBuckets.Count == 0)
             {
@@ -55,8 +30,16 @@ public class Basket
                 continue;
             }
 
-            var possibleBuckets = bookBuckets.Where(x => !x.Contains(book));
-            GetBestBookBucket(possibleBuckets, book).Add(book);
+            IEnumerable<BookBucket> possibleBuckets = bookBuckets.Where(bb => !bb.Contains(book));
+            if (possibleBuckets.Any())
+            {
+                GetBestBookBucket(possibleBuckets, book).Add(book);
+            }
+            else
+            {
+                BookBucket newBucket = new(book);
+                bookBuckets.Add(newBucket);
+            }
         }
 
         return bookBuckets;

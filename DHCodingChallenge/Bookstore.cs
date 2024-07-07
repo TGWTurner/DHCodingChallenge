@@ -8,7 +8,7 @@ class Bookstore
     {
         Basket basket = new();
 
-        //store the options somewhere?
+        //TODO: convert to configuration file
         List<int> bookOptions = [1, 2, 3, 4, 5];
 
         Console.WriteLine("Bookstore started:");

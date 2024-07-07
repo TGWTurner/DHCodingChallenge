@@ -31,4 +31,14 @@ possible.
 
 * Decimal type for storing currency values
 * Optimal basket calculation after the basket has been fully filled
+* * Leaves solution more open for the potential of removing books
 * Configuration file for storing discounts in
+* Discounts object to allow for possability of more books than provided discounts
+
+### Improvements
+
+* Configuration File
+  * Store the discounts and number of books
+* More books
+  * Just add them to the config file along with the discount for that many books
+* Convert BookBuckets.discounts to its own class
