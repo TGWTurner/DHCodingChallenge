@@ -10,7 +10,6 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("DunnHumby Coding Challenge");
-        Console.WriteLine("Bookstore:");
 
         (Discounts discounts, List<int> bookOptions) = GetConfig();
 
@@ -27,7 +26,7 @@ class Program
     {
         return (
             new Discounts([1, 0.95, 0.9, 0.80, 0.75]),
-            new List<int> {1, 2, 3, 4, 5}
+            [1, 2, 3, 4, 5]
         );
     }
 }

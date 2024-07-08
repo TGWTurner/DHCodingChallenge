@@ -4,15 +4,14 @@ public class Discounts(double[] discounts)
 {
     private readonly double[] DiscountStore = discounts;
 
-    public double Get(int index)
+    public double Get(int noOfBooks)
     {
-        if (index < DiscountStore.Length)
+        if (noOfBooks < DiscountStore.Length)
         {
-            return DiscountStore[index];
+            return DiscountStore[noOfBooks - 1];
         }
         else
         {
-            //If have more books than there are discounts, return the last discount value
             return DiscountStore.Last();
         }
     }

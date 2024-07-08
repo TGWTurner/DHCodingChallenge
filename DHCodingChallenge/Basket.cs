@@ -10,6 +10,12 @@ public class Basket(Discounts discounts)
     public decimal Total {
         get {
             List<BookBucket> bookBuckets = GetBestBuckets();
+
+            foreach(BookBucket bb in bookBuckets)
+            {
+                Console.WriteLine(bb);
+            }
+
             return bookBuckets.Sum(bb => bb.Total);
         }
     }
@@ -32,7 +38,7 @@ public class Basket(Discounts discounts)
                 continue;
             }
 
-            IEnumerable<BookBucket> possibleBuckets = bookBuckets.Where(bb => !bb.Contains(book));
+            List<BookBucket> possibleBuckets = bookBuckets.Where(bb => !bb.Contains(book)).ToList();
             if (possibleBuckets.Any())
             {
                 GetBestBookBucket(possibleBuckets, book).Add(book);
@@ -47,14 +53,18 @@ public class Basket(Discounts discounts)
         return bookBuckets;
     }
 
-    private BookBucket GetBestBookBucket(IEnumerable<BookBucket> possibleBuckets, Book book)
+    private BookBucket GetBestBookBucket(List<BookBucket> possibleBuckets, Book book)
     {
         BookBucket currBestBucket = possibleBuckets.First();
-        decimal currBestPrice = currBestBucket.TotalWithBook(book);
+        currBestBucket.Add(book);
+        decimal currBestPrice = possibleBuckets.Sum(pb => pb.Total);
+        currBestBucket.Remove(book);
 
         foreach(BookBucket bookBucket in possibleBuckets.Except([currBestBucket]))
         {
-            decimal bookBucketTotal = bookBucket.TotalWithBook(book);
+            bookBucket.Add(book);
+            decimal bookBucketTotal = possibleBuckets.Sum(pb => pb.Total);
+            bookBucket.Remove(book);
 
             if (currBestPrice > bookBucketTotal)
             {

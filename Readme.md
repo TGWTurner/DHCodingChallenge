@@ -30,11 +30,13 @@ possible.
 
 * Decimal type for storing currency values
 * Optimal basket calculation after the basket has been fully filled
-* * Leaves solution more open for the potential of removing books
+  * Leaves solution more open for the potential of removing books
+  * Calculates the optimal by testing possible buckets (ie. those that dont already have this book) and calculates the total of the possible buckets
 * Discounts object to allow for possibility of more books than provided discounts
 
 ### Possible Changes/Improvements
 
 * Configuration File
   * Store the discounts and number of books for easy updating later
-*
+* Add removing from basket
+* Extract Console.WriteLine/Console.Readline calls to object for flexability and testing within Bookstore.cs

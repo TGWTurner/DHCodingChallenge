@@ -7,7 +7,7 @@ public class BookBucket
 
     public decimal Total{
         get {
-            return Books.Sum(x => x.Price) * (decimal) Discounts.Get(Books.Count -1);
+            return Books.Sum(x => x.Price) * (decimal) Discounts.Get(Books.Count);
         }
     }
 
@@ -42,15 +42,6 @@ public class BookBucket
     public bool Contains(Book book)
     {
         return Books.Exists(b => b.Identifier == book.Identifier);
-    }
-
-    public decimal TotalWithBook(Book book)
-    {
-        Books.Add(book);
-        decimal total = Total;
-        Books.Remove(book);
-
-        return total;
     }
 
     public override string ToString()

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DHCodingChallenge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1999c9825d88360e07b6d94ffb6206a757dbfcb9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76703ed2d5079b304ffe21b2c59beec0604dbb0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DHCodingChallenge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DHCodingChallenge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
