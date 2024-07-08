@@ -22,7 +22,7 @@ public class Bookstore(Discounts discounts, List<int> bookOptions)
                 Console.WriteLine($"Enter the number of book {bookOption} to add to the basket [0+]");
                 string? input = Console.ReadLine();
 
-                if (!IsValidInput(input))
+                if (input == null || !IsValidInput(input))
                 {
                     Console.WriteLine("Error in your input, please enter a positive integer");
                     accepted = false;
@@ -44,9 +44,7 @@ public class Bookstore(Discounts discounts, List<int> bookOptions)
     }
 
     private static bool IsValidInput(string? input) {
-        if (
-            input == null ||
-            !int.TryParse(input, out int integer) ||
+        if (!int.TryParse(input, out int integer) ||
             integer < 0
         ) {
             return false;
