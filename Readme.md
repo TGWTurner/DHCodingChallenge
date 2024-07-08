@@ -38,5 +38,6 @@ possible.
 
 * Configuration File
   * Store the discounts and number of books for easy updating later
+  * Or, in a Azure/AWS/GCloud hosted file
 * Add removing from basket
 * Extract Console.WriteLine/Console.Readline calls to object for flexability and testing within Bookstore.cs

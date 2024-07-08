@@ -1,4 +1,3 @@
-using System.Numerics;
 using DHCodingChallenge.Objects;
 
 namespace DHCodingChallenge;

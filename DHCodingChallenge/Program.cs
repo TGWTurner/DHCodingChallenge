@@ -1,6 +1,4 @@
-﻿
-using System.Configuration;
-using DHCodingChallenge.Objects;
+﻿using DHCodingChallenge.Objects;
 
 namespace DHCodingChallenge;
 
@@ -21,7 +19,7 @@ class Program
         } while (!"q".Equals(Console.ReadLine()));
     }
 
-    //TODO: Get from configuration file
+    //TODO: Get from configuration file / Reach out to an AWS/Azure/GCloud hosted configuration
     static (Discounts, List<int>) GetConfig()
     {
         return (
